@@ -1,0 +1,25 @@
+{% extends 'eapp/base.html' %}
+{% block body %}
+
+  <div class="row">
+
+
+
+
+  {% for p in product_list %}
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+      <div class="card" style="width: 20rem;">
+        <img src="{{p.photo.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{p.name}}</h5>
+          <p class="card-text">Discount price:{{p.price}}</p>
+          <a href="{{p.id}}" class="btn btn-primary">Visit</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+{% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'eapp/base.html' %}
+{% load bootstrap3 %}
+{% block body %}
+<hr><br>
+<h2>
+  <em>Create New Category for Product</em>
+</h2>
+<form  method="post">
+{% csrf_token %}
+{% bootstrap_form form %}
+  <input type="submit" class="btn btn-outline-info" value="Create">
+</form>
+<br><br><br><br> <br>
+{% endblock %}

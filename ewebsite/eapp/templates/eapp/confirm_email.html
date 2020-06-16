@@ -1,0 +1,19 @@
+{% extends 'eapp/base.html' %}
+{% block body %}
+<div class="jumbotron">
+
+
+<h1>
+  <em>Please confirm your email</em>
+</h1>
+<h3>confirmation code is send to:{{email}} </h3>
+</div>
+<form action="{% url 'eapp:check' %}" method="POST">
+<label for="code">Please Enter 6 digit code here</label>
+<input type="number" name="code" placeholder="Code">
+{%  csrf_token %}
+  <input type="submit" class="btn btn-info" value="submit">
+</form>
+<a class="btn btn-info"href="{% url 'eapp:confirm_email' %}">Re-Send Email</a>
+<hr><br><br>
+{% endblock %}

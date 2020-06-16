@@ -1,0 +1,10 @@
+{% extends 'eapp/base.html' %}
+{% block body %}
+<ul>
+{% for cat in category_list %}
+ <li>
+  <a class="dropdown-item" href="#">{{cat.product_category}}</a>
+   </li>
+{% endfor %}
+   </ul>
+{% endblock%}

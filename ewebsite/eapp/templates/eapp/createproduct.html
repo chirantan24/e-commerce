@@ -1,0 +1,14 @@
+{% extends 'eapp/base.html' %}
+{% load bootstrap3 %}
+{% block body %}
+<div class="jumbotron">
+  <h1>
+    <em>Create New Product Here !</em>
+  </h1>
+</div>
+<form enctype="multipart/form-data" method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <input type="submit" class="btn btn-success" value="Add product">
+</form>
+{% endblock %}

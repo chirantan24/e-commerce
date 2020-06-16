@@ -1,0 +1,14 @@
+{% extends 'eapp/base.html' %}
+{% load bootstrap3 %}
+{% block body %}
+<div class="jumbotron">
+  <h1>
+    <em>Feedback Form</em>
+  </h1>
+</div>
+<form  method="post">
+  {% csrf_token %}
+     {% bootstrap_form form %}
+     <input type="submit" class="btn btn-outline-info" value="Post">
+</form>
+{% endblock %}
