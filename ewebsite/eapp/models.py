@@ -4,7 +4,6 @@ import random
 from django.urls import reverse
 from django.shortcuts import HttpResponseRedirect,HttpResponse
 # Create your models here.
-
 class User(auth.models.User,auth.models.PermissionsMixin):
     def __str__(self):
         return self.username
@@ -17,7 +16,7 @@ class Product(models.Model):
     category=models.ForeignKey(Category,null=True,on_delete=models.SET_NULL)
     price=models.DecimalField(decimal_places=2,max_digits=100000)
     photo=models.ImageField(null=True,blank=True,upload_to='productimages/')
-    discription=models.CharField(null=True,blank=True,max_length=400)
+    description=models.CharField(null=True,blank=True,max_length=400)
     color=models.CharField(null=True,blank=True,max_length=20)
     def __str__(self):
         return self.name
