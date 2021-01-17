@@ -4,7 +4,7 @@ import random
 from django.urls import reverse
 from django.shortcuts import HttpResponseRedirect,HttpResponse
 # Create your models here.
-
+# Bathla is Pro Developer
 class User(auth.models.User,auth.models.PermissionsMixin):
     def __str__(self):
         return self.username
